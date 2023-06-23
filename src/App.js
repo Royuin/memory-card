@@ -41,6 +41,17 @@ export default function App() {
     id: uniqid()}
     ]);
 
+  function shuffle() {
+    const shuffledArray = []; 
+    const copyArray =  characters;
+    for (let i = characters.length; i > 0; i--) {
+      const newIndex = Math.floor(Math.random() * (i));
+     const item =  (copyArray.splice(newIndex, 1));
+      Array.prototype.push.apply(shuffledArray, item);
+      }
+    setCharacters(shuffledArray);
+  }
+
   return (
     <div className="App">
       <Header score={score} highScore={highScore} />
