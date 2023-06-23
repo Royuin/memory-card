@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Main from './components/Main';
 import bender from './assets/bender.webp';
 import fry from './assets/fry.webp';
 import leela from './assets/leela.webp';
@@ -55,6 +56,7 @@ export default function App() {
   return (
     <div className="App">
       <Header score={score} highScore={highScore} />
+      <Main characters={characters} />
     </div>
   );
 }
