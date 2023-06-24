@@ -19,8 +19,9 @@ body {
 }
 
 img {
-  width: 225px;
-  height: 405px;
+  /* width: 225px; */
+  width: 15vw; 
+  height: 30vw;
   background-color: var(--dark-blue);
   padding: 5% 10% 5% 10%;
   border: 5px groove var(--dark-rust);
@@ -49,7 +50,7 @@ p {
   background-color: var(--dark-blue);
   font-weight: bold;
   font-size: 1.2rem;
-  width: 225px;
+  width: 15vw;
   padding: 10px 0 10px 0;
   display: flex;
   justify-content: center;
