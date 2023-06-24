@@ -1,22 +1,35 @@
+* {
+  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #282f49;
+    --dark-rust: #78350f;
+    --light-blue: #38bdf8;
+    --yellow: #fde68a;
+}
+
 body {
-  background-color: #38bdf8;
-  color: #78350F;
-  text-shadow: 2px 2px 1px #fde68a;
+  background-color: var(--light-blue);
+  color: var(--dark-rust);
+  text-shadow: 2px 2px 1px var(--yellow);
 }
 
 img {
-  width: 150px;
+  width: 200px;
   height: 405px;
-  background-color: #282f49;
+  background-color: var(--dark-blue);
   padding: 5% 10% 5% 10%;
-  border: 5px solid #78350F;
+  border: 5px solid var(--dark-rust);
 }
 
 ul {
   display: grid;
     grid-template-columns: repeat(4, auto);
   padding: 0;
-  gap: 55px;
+  gap: 25px;
 }
   
 li {
@@ -25,4 +38,5 @@ li {
   flex-direction: column;
   place-items: center;
 }
+
 
