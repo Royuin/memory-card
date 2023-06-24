@@ -5,8 +5,8 @@ export default function Main ({characters, shuffle, checkIfInMemory}) {
       const id =character.id;
       return (
         <li onClick={() => {
-        shuffle();
-        checkIfInMemory(id);
+          shuffle();
+          checkIfInMemory(id);
         }}
           className='card' key={character.id} >
           <img  src={character.link} alt={character.name +  ' from Futurama standing'}  />
