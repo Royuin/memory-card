@@ -1,14 +1,14 @@
 * {
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
   --dark-blue: #282f49;
-    --dark-rust: #78350f;
-    --light-blue: #38bdf8;
-    --yellow: #fde68a;
+  --dark-rust: #78350f;
+  --light-blue: #38bdf8;
+  --yellow: #fde68a;
 }
 
 body {
@@ -28,11 +28,11 @@ img {
 
 ul {
   display: grid;
-    grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, auto);
   padding: 0;
   gap: 25px;
 }
-  
+
 li {
   list-style: none;
   display: flex;
@@ -40,7 +40,7 @@ li {
   place-items: center;
 }
 
- img:hover {
+img:hover {
   background-color: var(--yellow);
   cursor: pointer;
 }
@@ -60,6 +60,6 @@ p {
 
 p:hover {
   cursor: pointer;
-    background-color: var(--yellow);
-    color: var(--dark-rust);
-  }
+  background-color: var(--yellow);
+  color: var(--dark-rust);
+}
