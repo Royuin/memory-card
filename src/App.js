@@ -47,6 +47,22 @@ export default function App() {
     setMemory(previousState => [...previousState, id]);
   }
 
+  function updateScores() {
+    setScore(score + 1)
+    if (score + 1 > highScore) {
+    setHighScore(highScore + 1);
+    }
+  }
+
+  function checkIfInMemory(id) {
+    if (memory.every((element) => element !== id) )  {
+      updateScores();
+      addToMemory(id);
+    } else {
+      return
+    }
+  }
+
   function shuffle() {
     const shuffledArray = []; 
     const copyArray =  characters;
@@ -61,7 +77,7 @@ export default function App() {
   return (
     <div className="App">
       <Header score={score} highScore={highScore} />
-      <Main characters={characters} shuffle={shuffle} addToMemory={addToMemory} />
+      <Main characters={characters} shuffle={shuffle} checkIfInMemory={checkIfInMemory} />
     </div>
   );
 }
