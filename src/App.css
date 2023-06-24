@@ -18,11 +18,11 @@ body {
 }
 
 img {
-  width: 200px;
+  width: 225px;
   height: 405px;
   background-color: var(--dark-blue);
   padding: 5% 10% 5% 10%;
-  border: 5px solid var(--dark-rust);
+  border: 5px groove var(--dark-rust);
 }
 
 ul {
@@ -39,4 +39,24 @@ li {
   place-items: center;
 }
 
+ img:hover {
+  background-color: var(--yellow);
+  cursor: pointer;
+}
 
+p {
+  background-color: var(--dark-blue);
+  width: 225px;
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  border: 5px groove #78350F;
+  color: var(--yellow);
+  text-shadow: none;
+} 
+
+p:hover {
+  cursor: pointer;
+    background-color: var(--yellow);
+    color: var(--dark-rust);
+  }
