@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--light-blue);
+  line-height: 1.5;
   color: var(--dark-rust);
   text-shadow: 2px 2px 1px var(--yellow);
 }
@@ -46,6 +47,8 @@ li {
 
 p {
   background-color: var(--dark-blue);
+  font-weight: bold;
+  font-size: 1.2rem;
   width: 225px;
   padding: 10px 0 10px 0;
   display: flex;
