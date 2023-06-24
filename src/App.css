@@ -3,3 +3,26 @@ body {
   color: #78350F;
   text-shadow: 2px 2px 1px #fde68a;
 }
+
+img {
+  width: 150px;
+  height: 405px;
+  background-color: #282f49;
+  padding: 5% 10% 5% 10%;
+  border: 5px solid #78350F;
+}
+
+ul {
+  display: grid;
+    grid-template-columns: repeat(4, auto);
+  padding: 0;
+  gap: 55px;
+}
+  
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
