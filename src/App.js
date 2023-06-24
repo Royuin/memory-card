@@ -50,8 +50,14 @@ export default function App() {
   function updateScores() {
     setScore(score + 1)
     if (score + 1 > highScore) {
-    setHighScore(highScore + 1);
+      setHighScore(highScore + 1);
     }
+  }
+
+  function resetGame() {
+    setScore(0);
+    setMemory([]);
+
   }
 
   function checkIfInMemory(id) {
@@ -59,6 +65,7 @@ export default function App() {
       updateScores();
       addToMemory(id);
     } else {
+      resetGame()
       return
     }
   }
