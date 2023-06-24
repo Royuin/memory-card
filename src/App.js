@@ -18,45 +18,50 @@ export default function App() {
   const [characters, setCharacters] = useState([
     {link: bender,
       name: 'Bender',
-    id: uniqid()},
+      id: uniqid()},
     {link: fry,
       name: 'Fry',
-    id: uniqid()},
+      id: uniqid()},
     {link: leela,
       name: 'Leela',
-    id: uniqid()},
+      id: uniqid()},
     {link: amy,
       name: 'Amy',
-    id: uniqid()},
+      id: uniqid()},
     {link: hermes,
       name: 'Hermes',
-    id: uniqid()},
+      id: uniqid()},
     {link: zoidberg,
       name: 'Zoidberg',
-    id: uniqid()},
+      id: uniqid()},
     {link: farnsworth,
       name: 'Farnsworth',
-    id: uniqid()},
+      id: uniqid()},
     {link: scruffy,
       name: 'Scruffy',
-    id: uniqid()}
-    ]);
+      id: uniqid()}
+  ]);
+  const [memory, setMemory] = useState([]);
+
+  function addToMemory (id) {
+    setMemory(previousState => [...previousState, id]);
+  }
 
   function shuffle() {
     const shuffledArray = []; 
     const copyArray =  characters;
     for (let i = characters.length; i > 0; i--) {
       const newIndex = Math.floor(Math.random() * (i));
-     const item =  (copyArray.splice(newIndex, 1));
+      const item =  (copyArray.splice(newIndex, 1));
       Array.prototype.push.apply(shuffledArray, item);
-      }
+    }
     setCharacters(shuffledArray);
   }
 
   return (
     <div className="App">
       <Header score={score} highScore={highScore} />
-      <Main characters={characters} />
+      <Main characters={characters} shuffle={shuffle} addToMemory={addToMemory} />
     </div>
   );
 }
